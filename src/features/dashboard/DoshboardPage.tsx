@@ -22,7 +22,9 @@ export default function DashboardPage() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-10 text-white">
-      <h1 className="text-3xl font-bold mb-6 text-center">داشبورد تسک‌ها</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center text-gray-900 dark:text-white">
+  داشبورد تسک‌ها
+</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <StatCard label="کل تسک‌ها" value={total} color="bg-gray-700" />
