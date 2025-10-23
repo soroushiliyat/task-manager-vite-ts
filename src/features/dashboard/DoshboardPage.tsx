@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchTasks } from '../tasks/api';
 import { type Task } from '../tasks/types';
-import { Link } from 'react-router-dom';
 
 export default function DashboardPage() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -33,7 +32,8 @@ export default function DashboardPage() {
         <StatCard label="انجام شده" value={completed} color="bg-green-600" />
       </div>
 
-      
+     
+     
     </div>
   );
 }
