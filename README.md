@@ -45,7 +45,7 @@ src/ ├── components/         # Reusable UI components ├── features/ 
 
 ## 🧪 Run Locally
 
-```bash
+
 # Clone the repo
 git clone https://github.com/soroushiliyat/task-manager-vite-ts
 cd task-manager-vite-ts
