@@ -33,14 +33,7 @@ export default function DashboardPage() {
         <StatCard label="انجام شده" value={completed} color="bg-green-600" />
       </div>
 
-      <div className="flex justify-center">
-        <Link
-          to="/tasks"
-          className="bg-white text-purple-700 font-semibold px-6 py-2 rounded shadow hover:bg-gray-100 transition"
-        >
-          رفتن به لیست تسک‌ها
-        </Link>
-      </div>
+      
     </div>
   );
 }
