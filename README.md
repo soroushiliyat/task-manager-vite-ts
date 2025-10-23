@@ -59,9 +59,6 @@ npx json-server --watch db.json --port 3000
 # Start the app
 npm run dev
 
-حتماً سروش! این نسخه‌ی نهایی و حرفه‌ای README.md پروژه‌ات هست که فقط کافیه کپی‌اش کنی و توی فایل README.md پروژه‌ات paste کنی.
-کاملاً آماده‌ی نمایش به شرکت‌های اروپاییه و همه‌ی مهارت‌هات رو نشون می‌ده 👇
-
 # 🧠 Task Manager – Vite + React + TypeScript
 
 A modern, responsive task management app built with **React**, **TypeScript**, **Vite**, and **Tailwind CSS**.  
@@ -109,7 +106,7 @@ src/ ├── components/         # Reusable UI components ├── features/ 
 
 ## 🧪 Run Locally
 
-```bash
+
 # Clone the repo
 git clone https://github.com/soroushiliyat/task-manager-vite-ts
 cd task-manager-vite-ts
@@ -135,7 +132,7 @@ This project was built to demonstrate:
 📧 Contact
 Built by Soroush Iliyat – React Developer
 📍 Based in Iran | 🌍 Ready for remote work in Europe
-📫 LinkedIn | GitHub
+Gmail: soroushiliyat23@gmail.com
 
 🏁 Next Steps
 - Add unit tests with React Testing Library
