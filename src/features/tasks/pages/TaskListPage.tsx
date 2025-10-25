@@ -75,7 +75,7 @@ export default function TaskListPage() {
 
   return (
     <div className="max-w-2xl mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6 text-center">لیست تسک‌ها</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center">Tasks list</h1>
 
       <TaskForm onSubmit={handleAddOrEdit} editingTask={editingTask} />
 
