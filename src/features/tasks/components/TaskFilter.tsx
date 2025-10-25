@@ -18,15 +18,15 @@ export default function TaskFilter({
         onChange={(e) => setStatusFilter(e.target.value)}
         className="p-2 rounded border"
       >
-        <option value="">همه وضعیت‌ها</option>
-        <option value="pending">در انتظار</option>
-        <option value="in-progress">در حال انجام</option>
-        <option value="completed">انجام شده</option>
+        <option value="">All Statuses</option>
+        <option value="pending">Pending</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">اCompleted</option>
       </select>
 
       <input
         type="text"
-        placeholder="جستجو بر اساس عنوان..."
+        placeholder="Search by title..."
         value={searchQuery}
         onChange={(e) => setSearchQuery(e.target.value)}
         className="p-2 rounded border flex-1"
