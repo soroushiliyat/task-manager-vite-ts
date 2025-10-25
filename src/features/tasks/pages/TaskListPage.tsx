@@ -15,10 +15,10 @@ export default function TaskListPage() {
   useEffect(() => {
     fetchTasks()
       .then(data => {
-        console.log('تسک‌های دریافتی:', data);
+        console.log('Received Tasks:', data);
         setTasks(data);
       })
-      .catch(() => toast.error('خطا در دریافت تسک‌ها از سرور'));
+      .catch(() => toast.error('Failed to fetch tasks from server'));
   }, []);
 
   const handleAddOrEdit = async (task: Task) => {
@@ -27,25 +27,25 @@ export default function TaskListPage() {
       if (editingTask) {
         const updated = await updateTask(task);
         if (!updated) {
-          toast.error('ویرایش ناموفق');
+          toast.error('Edit failed');
           return;
         }
         updatedTasks = tasks.map(t => (t.id === updated.id ? updated : t));
-        toast.success('تسک با موفقیت ویرایش شد');
+        toast.success('Tasks edited successfully');
       } else {
         const created = await createTask(task);
         if (!created) {
-          toast.error('ثبت ناموفق');
+          toast.error('Submission failed');
           return;
         }
         updatedTasks = [created, ...tasks];
-        toast.success('تسک جدید ثبت شد');
+        toast.success('New task created');
       }
       setTasks(updatedTasks);
       setEditingTask(undefined);
     } catch (err) {
-      console.error('خطا در ذخیره تسک:', err);
-      toast.error('خطا در ذخیره تسک');
+      console.error('Failed to save task:', err);
+      toast.error('Failed to save task');
     }
   };
 
@@ -53,15 +53,15 @@ export default function TaskListPage() {
     try {
       const success = await deleteTask(id);
       if (!success) {
-        toast.error('حذف ناموفق');
+        toast.error('Delete failed');
         return;
       }
       const updated = tasks.filter(t => t.id !== id);
       setTasks(updated);
-      toast.success('تسک حذف شد');
+      toast.success('Task deleted');
     } catch (err) {
-      console.error('خطا در حذف تسک:', err);
-      toast.error('خطا در حذف تسک');
+      console.error('Failed to delete task:', err);
+      toast.error('Failed to delete task');
     }
   };
 
