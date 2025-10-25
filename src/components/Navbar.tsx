@@ -13,17 +13,17 @@ export default function Navbar() {
     <nav className="bg-purple-800 text-white px-4 py-3 shadow flex justify-between items-center">
       <div className="flex gap-4">
         <NavLink to="/" className={linkClass}>
-          داشبورد
+          Dashboard
         </NavLink>
         <NavLink to="/tasks" className={linkClass}>
-          تسک‌ها
+          Tasks
         </NavLink>
       </div>
       <button
         onClick={toggleTheme}
         className="bg-white text-purple-700 px-3 py-1 rounded text-sm font-semibold"
       >
-        تغییر تم ({theme === 'dark' ? 'تاریک' : 'روشن'})
+        Theme change ({theme === 'dark' ? 'dark' : 'light'})
       </button>
     </nav>
   );
