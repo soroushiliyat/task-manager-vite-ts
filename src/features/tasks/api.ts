@@ -23,7 +23,7 @@ export async function createTask(task: Task): Promise<Task | null> {
     saveTasks(updated);
     return newTask;
   } catch (err) {
-    console.error('خطا در ذخیره تسک:', err);
+    console.error('Error to Save:', err);
     return null;
   }
 }
@@ -35,7 +35,7 @@ export async function updateTask(task: Task): Promise<Task | null> {
     saveTasks(updated);
     return task;
   } catch (err) {
-    console.error('خطا در ویرایش تسک:', err);
+    console.error('Error to Edit:', err);
     return null;
   }
 }
@@ -47,7 +47,7 @@ export async function deleteTask(id: string): Promise<boolean> {
     saveTasks(updated);
     return true;
   } catch (err) {
-    console.error('خطا در حذف تسک:', err);
+    console.error('Error Remove', err);
     return false;
   }
 }
