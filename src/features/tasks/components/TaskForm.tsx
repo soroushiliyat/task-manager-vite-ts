@@ -28,12 +28,12 @@ export default function TaskForm({ onSubmit, editingTask }: Props) {
     e.preventDefault();
 
     if (!title.trim()) {
-      setError('عنوان تسک الزامی است');
+      setError('Task title is required');
       return;
     }
 
     if (!['pending', 'in-progress', 'completed'].includes(status)) {
-      setError('وضعیت نامعتبر است');
+      setError('Invalid status');
       return;
     }
 
@@ -63,21 +63,21 @@ export default function TaskForm({ onSubmit, editingTask }: Props) {
       className="bg-white dark:bg-gray-800 p-4 rounded shadow mb-6 space-y-4"
     >
       <h2 className="text-xl font-bold text-gray-800 dark:text-white">
-        {editingTask ? 'ویرایش تسک' : 'تسک جدید'}
+        {editingTask ? 'Edit task' : 'New task'}
       </h2>
 
       {error && <p className="text-red-500 text-sm">{error}</p>}
 
       <input
         type="text"
-        placeholder="عنوان تسک"
+        placeholder="Task title"
         className="w-full p-2 rounded border dark:bg-gray-700 dark:text-white"
         value={title}
         onChange={e => setTitle(e.target.value)}
       />
 
       <textarea
-        placeholder="توضیحات"
+        placeholder="- Description"
         className="w-full p-2 rounded border dark:bg-gray-700 dark:text-white"
         value={description}
         onChange={e => setDescription(e.target.value)}
@@ -88,9 +88,9 @@ export default function TaskForm({ onSubmit, editingTask }: Props) {
         value={status}
         onChange={e => setStatus(e.target.value as Task['status'])}
       >
-        <option value="pending">در انتظار</option>
-        <option value="in-progress">در حال انجام</option>
-        <option value="completed">انجام شده</option>
+        <option value="pending">Pending</option>
+        <option value="in-progress">  In Progress</option>
+        <option value="completed">اCompleted</option>
       </select>
 
       <input
@@ -104,7 +104,7 @@ export default function TaskForm({ onSubmit, editingTask }: Props) {
         type="submit"
         className="bg-purple-700 text-white px-4 py-2 rounded hover:scale-105 hover:bg-purple-800 transition-transform duration-200"
       >
-        {editingTask ? 'ذخیره تغییرات' : 'افزودن تسک'}
+        {editingTask ? 'Save Changes' : 'Add Task'}
       </button>
     </motion.form>
   );
